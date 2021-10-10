@@ -1,1 +1,562 @@
-// Начните писать стили здесь
+@import "./scaffolding";
+// @import "./blocks/main-nav";
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.main-nav {
+  z-index: 1;
+  position: relative;
+
+  &__container-logo {
+    padding: 23px 20px 20px;
+    display: flex;
+    background-color: #283645;
+    border-bottom: 1px solid #000;
+  }
+
+  &__logo {
+    display: flex;
+  }
+
+  &__logo:active {
+    opacity: 10%;
+  }
+
+  &__logo-image {
+    fill: red;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #283645;
+  }
+
+  &__item {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid #000;
+  }
+
+  &__link {
+    margin: 0 auto;
+    padding: 19px;
+    font-weight: 700;;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__link:hover {
+    color: #D22856;
+  }
+
+  &__link:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+
+  &__menu-open,
+  &__menu-close {
+    border: none;
+    padding: 0;
+    background: none;
+  }
+
+  &__menu-open {
+    display: none;
+  }
+
+  &__menu-close {
+    margin-left: auto;
+  }
+
+  &__icon-open,
+  &__icon-close {
+    fill: #fff;
+  }
+
+  &__icon-close:hover,
+  &__icon-open:hover {
+    fill: #D22856;
+  }
+
+  &__icon-close:active,
+  &__icon-open:active {
+    fill: rgba(210, 40, 86, 0.3);
+  }
+}
+
+.download-app {
+  margin-top: -67px;
+  background-color: #fff;
+
+  &__container-title {
+    min-height: 462px;
+    background-image: url(../img/bg-back-mobile@1x.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: flex;
+      width: 100%;
+      height: 286px;
+      background-image: url(../img/iphone-hand-mobile@1x.png);
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  &__title {
+    width: 228px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 89px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 300;
+    color: #fff;
+  }
+
+  &__container-link {
+    padding: 28px 20px 31px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1D2631;
+  }
+
+  &__link {
+    display: block;
+    padding: 12px 36px 13px 35px;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  &__link:hover {
+    color: #D22856;
+    background-color: #fff;
+  }
+
+  &__link:active {
+    color: #D22856;
+    color: rgba(210, 40, 86, 0.3);
+    background-color: #fff;
+  }
+
+  &__list {
+    width: 204px;
+    margin-top: 32px;
+    margin-bottom: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item:nth-child(2) {
+    padding-top: 3px;
+  }
+
+  &__item:nth-child(3) {
+    padding-top: 9px;
+  }
+
+  &__item-link {
+    display: flex;
+  }
+
+  &__description {
+    width: 230px;
+    margin: 0;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.decor-triangle {
+  width: 100%;
+  height: 25.3px;
+  position: absolute;
+  bottom: 0;
+  fill: #F2F2F2;
+  z-index: 10;
+  transform: rotate(180deg);
+}
+
+.about-app {
+  &__title-container {
+    padding-top: 40px;
+    padding-bottom: 63px;
+    background-color: #fff;
+    position: relative;
+  }
+
+  &__title,
+  &__our-offer {
+    margin: 0 auto 29px auto;
+    color: #283645;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+    text-align: center;
+  }
+
+  &__our-offer {
+    margin: 0;
+  }
+
+  &__advantages-list {
+    padding: 50px 25px 287px 25px;
+    position: relative;
+    background-color: #F2F2F2;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -43px;
+      left: 82px;
+      height: 320px;
+      width: 157px;
+      background-image: url(../img/iphone-screen-mobile@1x.png);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__advantage-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__advantage-description {
+    margin-top: 12px;
+    margin-bottom: 31px;
+    text-align: center;
+  }
+
+  &__effect,
+  &__effect-title,
+  &__effect-description {
+    display: none;
+  }
+
+  &__reviews {
+    padding-bottom: 55px;
+    position: relative;
+    background-color: #fff;
+  }
+
+  &__reviews-list {
+    padding: 41px 20px 31px 20px;
+  }
+
+  &__reviews-cite {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__reviews-text {
+    order: 2;
+    margin: 0;
+    margin-top: 13px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  &__reviews-author {
+    order: 1;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000;
+  }
+}
+
+.slider {
+  &__button-list {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 62px;
+  }
+
+  &__button-item {
+    display: flex;
+  }
+
+  &__button {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgba(40, 54, 69, 0.3);
+  }
+
+  &__button:hover {
+    background-color: rgba(40, 54, 69, 0.6);
+  }
+
+  &__button:active {
+    background-color: rgba(40, 54, 69, 0.1);
+  }
+
+  &__button--active,
+  &__button--active:hover,
+  &__button--active:active {
+    width: 12px;
+    height: 12px;
+    border: 3px solid #283645;
+    background-color: #fff;
+  }
+}
+
+.price-app {
+  padding-top: 81px;
+  padding-left: 20px; //!!!!
+  padding-bottom: 45px;
+  background-color: #f2f2f2;
+  position: relative;
+
+  &__table {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+    border: 2px solid #E5E5E5;
+  }
+
+  &__table-head {
+    padding: 12px 95px 32px 96px;
+    background-color: #283645;
+    border: 2px solid #E5E5E5;
+    border-bottom: none;
+  }
+
+  &__table-title {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color:#fff;
+  }
+
+  &__table-cost {
+    display: block;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    color:#fff;
+  }
+
+  &__table-data {
+    padding: 14px 17px 15px 20px;
+    color: #283645;
+    border: 2px solid #E5E5E5;
+    border-top: none;
+    position: relative;
+  }
+
+  &__data-filter {
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  &__icon-yes,
+  &__icon-no {
+    margin-left: auto;
+    fill: #3DC644;
+    position: absolute;
+    right: 17px;
+    bottom: 19px;
+  }
+
+  &__icon-no {
+    fill: #F25B26;
+    right: 19px;
+    bottom: 16px;
+  }
+}
+
+.feedback {
+  padding-top: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+
+  &__title {
+    margin: 0;
+    width: 222px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__phone-container,
+  &__email-container,
+  &__address-container {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__phone-container {
+    margin-top: 34px;
+  }
+
+  &__email-container {
+    margin-top: 18px;
+  }
+
+  &__address-container {
+    margin-top: 22px;
+    margin-bottom: 34px;
+  }
+
+  &__phone-label,
+  &__email-label,
+  &__address-label {
+    font-size: 18px;
+  }
+
+  &__phone,
+  &__email,
+  &__address {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 33px;
+    color: #D22856;
+  }
+
+  &__phone:hover,
+  &__email:hover {
+    text-decoration: underline;
+    color: #283645;
+  }
+
+  &__phone:active,
+  &__email:active {
+    color: rgba(40, 54, 69, 0.3);
+  }
+
+  &__map-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+
+  &__map-triangle {
+    display: flex;
+    position: absolute;
+    height: 33px;
+    width: 100%;
+    top: 0;
+    fill: #fff;
+  }
+
+  &__map {
+    border: none;
+  }
+}
+
+.footer {
+  padding: 40px 71px 20px 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+
+  &__logo-container {
+    margin-bottom: 31px;
+  }
+
+  &__logo-container:active {
+    opacity: 10%;
+  }
+
+  &__copyright {
+    margin-top: 39px;
+    width: 131px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__copyright-label {
+    font-weight: 400;
+  }
+
+  &__copyright-link {
+    display: flex;
+  }
+
+  &__copyright-icon-link {
+    fill: #D22856;
+  }
+
+  &__copyright-icon-link:hover {
+    fill: #283645;
+  }
+
+  &__copyright-icon-link:active {
+    fill: rgba(40, 54, 69, 0.3);
+  }
+}
+
+.social-net {
+  &__list {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__link {
+    width: 55px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 3px solid rgba(40, 54, 69, 0.1);
+  }
+
+  &__link:hover {
+    border: 3px solid #283645;
+  }
+
+  &__link:active {
+    opacity: 10%;
+  }
+
+  &__icon-link {
+    margin: 0 auto;
+    fill: #D22856;
+  }
+}
